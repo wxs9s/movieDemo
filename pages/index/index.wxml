@@ -1,0 +1,34 @@
+<!--pages/index/index.wxml-->
+<view class="container">
+    <!-- <MyTitle></MyTitle> -->
+    <!-- 导航 -->
+    <view class="nav_wrap">
+      <!-- 自己滚动组件 scroll-view scroll-x -->
+      <!-- 点击导航条事件 bindtap -->
+      <scroll-view class="nav" scroll-x>
+        <view class="nav_in {{index===activeNo?'active':''}}"  wx:for="{{navList}}" wx:key="{{index}}"  bindtap="activeNav" data-index="{{index}}">
+          {{item}}
+        </view>
+      </scroll-view>
+    </view>
+    <!-- 轮播图 -->
+    <view class="slide">
+      <swiper autoplay indicator-color="blue" indicator-active-color="red"            indicator-dots="1000" circular>
+        <swiper-item wx:for="{{swiperList}}" wx:key="{{index}}">
+          <navigator>
+            <image src="{{item}}"></image>
+          </navigator>
+        </swiper-item>
+      </swiper>
+    </view>
+    <!-- <view bindtap="getTestList" data-index="{{index}}" >点我
+      <view wx:for="{{testList}}" wx:key="{{index}}">{{item.detail}}</view>
+    </view> -->
+    <view>
+      <video src="http://121.51.180.11/om.tc.qq.com/AUKk0z-Ue6GIFBwlslaq4RDCdQJk4AhNmNlrfmR0wON0/uwMROfz2r57AoaQXGdGnC2deB3dYv4oNCBdVbCXSmvjDwMX6/szg_11956420_50001_a8b29041c211433e88c29d93450af725.f622.mp4?sdtfrom=v1105&guid=6c1c27d22502f3ed3274dbd04800a4c8&vkey=1F5F225DBDA6EB647321ED0A10E440BE36224A2E5CAE81EAB0DC22203815DC37DC9C6BD2377794557156C45FBA5930276794DA18AEDBBFA6E628530F4AF6AF8F4053856627DAFD616D5260ED8DEB52C49392A9E75EB972F2C218833A165CD4C5E517856811174E9687CE6394DD9575712A70C1A26CBFA8241B56628C9214203B" title="相声有话好好说"><cover-view class="cover_text">你好啊小朋友</cover-view></video>
+    </view>
+    <view wx:for="{{testList}}" wx:key="index">
+      <view >{{item.legalName}}</view>
+    </view>
+</view>
+

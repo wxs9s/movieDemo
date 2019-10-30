@@ -1,0 +1,16 @@
+<view class="myTitle">
+<!-- logo -->
+<navigator class="logo">
+  <image src="../../images/logo.jpg"></image>
+</navigator>
+<!-- search -->
+<view class="search_icon">
+  <image src="../../images/search.jpg"></image>
+</view>
+<!-- user -->
+<view class="user_icon">
+  <image src="../../images/user.jpg"></image>
+</view>
+<!-- button -->
+<button class="download_icon">下载APP</button>
+</view>

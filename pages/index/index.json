@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "MyTitle": "../../components/myTitle/myTitle"
+  },
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "哔哩哔哩",
+  "enablePullDownRefresh": true
+}

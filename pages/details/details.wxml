@@ -1,0 +1,70 @@
+<view class="container">
+  <MyTitle></MyTitle>
+  <!-- <view>{{imgName}}</view> -->
+  <view class="video_info">
+    <!-- 视频 -->
+    <video src="{{imgInfo.imgSrc}}"></video>
+    <!-- 文字介绍 -->
+    <view class="title">
+      <text >{{imgInfo.title}}</text>
+      <text class="iconfont icon-arrow-down-" style="height:30rpx;padding-top:8rpx"></text>
+    </view>
+    <view class="detail">
+      <!-- 作者 -->
+      <text class="author">{{imgInfo.author}}</text>
+      <!-- 播放量 -->
+      <text class="playNum">{{imgInfo.playNum}}次</text>
+      <!-- 评论量 -->
+      <text class="opinion">{{imgInfo.opinion}}点评</text>
+      <!-- 发布时间 -->
+      <text class="uploadTime">{{imgInfo.uploadTime}}</text>
+    </view>
+  </view>
+  <!-- 推荐视频 -->
+  <view class="other_list" >
+    <navigator wx:for="{{otherVideo}}" wx:key="{{index}}" class="item">
+      <!-- 左边视频 -->
+      <view class="left_video">
+        <video src="{{item.videoSrc}}"></video>
+      </view>
+      <!-- 右边文字 -->
+      <view class="right_text">
+          <!-- 上边描述 -->
+          <view class="top_detail">
+            <text>{{item.title}}</text>
+          </view>
+          <!-- 下边描述 -->
+          <view class="bottom_detail">
+            <text>{{item.playNum}}点播量</text>
+            <text>{{item.transNum}}转发量</text>
+          </view>
+      </view>
+    </navigator>
+  </view>
+  <!-- 评论 -->
+  <view class="opinion">
+    <!-- 标题 -->
+    <view class="op_title">
+      <text>评论</text>
+    </view>
+    <!-- 评论内容 -->
+    <view class="op_info"  wx:for="{{opList}}" wx:key="{{index}}">
+      <!-- 用户头像 -->
+      <view class="op_picture">
+        <image src="{{item.picture}}"></image>
+      </view>
+      <!-- 评论详情 -->
+      <view class="op_detail">
+        <!-- 昵称、时间 -->
+        <view class="op_top">
+          <text>{{item.name}}</text>
+          <text>{{item.opTime}}</text>
+        </view>
+        <!-- 内容 -->
+        <view class="op_bottom">
+          <text>{{item.info}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

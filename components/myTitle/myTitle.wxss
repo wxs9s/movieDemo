@@ -1,0 +1,42 @@
+.myTitle{
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+  background-color: white
+}
+.logo{
+  flex: 7;
+}
+.logo image{
+  width: 200rpx;
+  height: 100rpx
+}
+.search_icon{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search_icon image{
+  width: 60rpx;
+  height: 50rpx;
+}
+.user_icon{
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.user_icon image{
+  width: 60rpx;
+  height: 50rpx;
+}
+.download_icon{
+  flex: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30rpx;
+  background-color: rgba(110, 174, 235, 0.863);
+  color: white;
+}

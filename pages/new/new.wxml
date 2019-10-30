@@ -1,0 +1,32 @@
+<view class="main">
+  <MyTitle></MyTitle>
+<view class="img_wrap">
+  <navigator url="../details/details?id={{item.id}}" class="full_show"  wx:for="{{videoShow}}" wx:key="{{index}}">
+    <!-- 图片容器 -->
+    <view class="img_item">
+      <!-- 图片 -->
+      <view class="img_show"><image   src="{{item.img}}"></image></view>
+      <!-- 图标 -->
+      <view class="img_info">
+        <!-- 点击量 -->
+        <view class="click_count">
+          <!-- 图标 -->
+          <text class="iconfont icon-hand-like"></text>
+          <!-- 数值 -->
+          <text class="click_info">{{item.click}}</text>
+        </view>
+        <!-- 转发量 -->
+        <view class="trans_count">
+          <!-- 图标 -->
+          <text class="iconfont icon-share-"></text>
+          <!-- 数值 -->
+          <text class="tran_info">{{item.trans}}</text>
+        </view>
+      </view>
+    </view>
+    <!-- 文字描述 -->
+    <view class="img_desc">{{item.title}}</view>
+  </navigator>
+  
+</view>
+</view>
